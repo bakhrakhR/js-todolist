@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="main-wraper">
+            <h1>to do list</h1>
+            <div class="add-wraper">
+
+                <input type="text" placeholder="add new task" id="newTask" autofocus>
+
+                <div class="btns">
+                    <button class="add material-symbols-outlined" onclick="addTask()" type="submit">add_task</button>
+                    <button class="add material-symbols-outlined" id="saveList">save</button>
+                    <button class="add material-symbols-outlined" id="clearList">ink_eraser</button>
+                </div>
+            </div>
+
+
+            <ul class="toDoList" id="taskList">
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="./script/todo.js"></script>
+</body>
+
+</html>

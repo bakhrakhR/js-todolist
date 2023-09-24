@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding: 70px;
+    background: linear-gradient(65deg, #2196F3 15%, #f39393 5% 40%, #ff93cfd9 40% 85%, #ff76edb3 85%);
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wraper {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    background: #10101c;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+h1 {
+    margin-bottom: 1.25rem;
+    color: #d3bb8e;
+    letter-spacing: 7px;
+    font-size: 2.75rem;
+}
+
+.add-wraper {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+#newTask {
+    width: 100%;
+    background: unset;
+    border: none;
+    border-bottom: 2px solid #956262;
+    color: cornsilk;
+    font-size: 1.5rem;
+    outline: none;
+}
+
+#newTask::placeholder {
+    color: #956262
+}
+
+.add {
+    width: 2.6875rem;
+    height: 2.6875rem;
+    border-radius: 50%;
+    background-color: #956262;
+    text-align: center;
+}
+
+.toDoList {
+    list-style: none;
+}
+
+.line {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+
+}
+
+.icons {
+    display: inline-flex;
+    gap: 6px;
+}
+
+.list-task_text {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    display: flex;
+    width: 80%;
+    overflow: hidden;
+}
+
+.material-symbols-outlined {
+    color: white;
+    margin-right: 7px;
+    cursor: pointer;
+    border: none;
+}
+
+.checkbox-round {
+    display: inline-block;
+    position: relative;
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+
+    background-color: #f39393;
+}
+
+input:checked+span {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* modal classes */
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: rgba(209, 202, 202, 0.9);
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.modal_text {
+    margin-bottom: 20px;
+    color: #6b4909;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+}
+
+.edit_area {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-editor {
+    background-color: #7c94b3;
+    width: 90%;
+    height: 2.5rem;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px 1px #7c94b3;
+    padding-left: 10px;
+    overflow: hidden;
+    outline: none;
+    letter-spacing: 2px;
+    opacity: 40%;
+
+}
+
+.save-edited-task {
+    background-color: #dff5ca;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #7cb3b3;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.save-edited-task:active {
+    background-color: #2980b9;
+    transform: scale(0.95);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+span.material-symbols-outlined {
+    border: 1px solid #999;
+    border-radius: 8px;
+    border: none;
+}
+
+.btns {
+    display: flex;
+}
+
+@media (max-width: 690px) {
+    html {
+        font-size: 12px;
+    }
+
+    .add-wraper {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 380px) {
+    .icons {
+        display: none;
+    }
+}
